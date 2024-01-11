@@ -1,0 +1,44 @@
+{
+    "name": "e-proces",
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node",
+            "config": { 
+                "includeFiles": ["assets/**"] 
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js",
+            "methods": ["GET", "POST"]
+        },
+        {
+            "src": "/assets/(.*)",
+            "dest": "/assets/$1"
+        },
+        {
+            "src": "/(.+)",
+            "dest": "/public/$1"
+        }
+    ],
+    "env": {
+        "API_KEY": "abcdefg12345",
+        "DEBUG": "true",
+        "PORT": "4001",
+
+        "DB_CLIENT": "mysql2",
+        "DB_HOST": "185.98.131.176",
+        "DB_USERNAME": "yamba1770964_8fgcij",
+        "DB_PASSWORD": "Yambadh2019@",
+        "DB_NAME": "yamba1770964_8fgcij",
+
+
+        "JWT_SECRET": "secret",
+        "JWT_EXPIRES_IN": "2h",
+        "JWT_REFRESH_EXPIRATION": "864000",
+        "NODE_ENV": "production"
+    }
+}

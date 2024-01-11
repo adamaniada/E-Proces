@@ -1,0 +1,18 @@
+<footer class="bg-dark text-light mt-5">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p class="mb-0">&copy; <span id="annee"></span> e-process by recuv-tech. Tous droits réservés.</p>
+    </div>
+</footer>
+<script>
+    // Fonction pour mettre à jour l'année
+    function mettreAJourAnnee() {
+      var date = new Date();
+      var annee = date.getFullYear();
+  
+      // Affichage de l'année dans l'élément avec l'id "annee"
+      document.getElementById("annee").textContent = annee;
+    }
+  
+    // Appel initial pour afficher l'année immédiatement
+    mettreAJourAnnee();
+</script>

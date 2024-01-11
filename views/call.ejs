@@ -1,0 +1,74 @@
+<!-- videoCall.ejs -->
+<%- include('base', { 
+  pageTitle: 'WebRTC Video Call', 
+  siteTitle: process.env.SITE_TITLE || 'e-proces',
+  content: `
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Video Call</h1>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="video-container">
+            <video id="localVideo" autoplay muted></video>
+            <video id="remoteVideo" autoplay></video>
+          </div>
+          <div class="button-container text-center mt-3">
+            <label for="callId" class="form-label">Enter Call ID:</label>
+            <div class="input-group mb-2">
+              <input type="text" id="callId" class="form-control" placeholder="Call ID" aria-label="Call ID">
+              <button onclick="initiateCall()" class="btn btn-primary">Initiate Call</button>
+              <button onclick="joinCall()" class="btn btn-success">Join Call</button>
+              <button onclick="endCall()" class="btn btn-danger">End Call</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+          <h3>Participants:</h3>
+          <ul id="participantsList" class="list-group">
+            <!-- Participant names will be displayed here -->
+            <!-- Example: <li class="list-group-item">Participant 1</li> -->
+            <li class="list-group-item">Participant 1</li>
+            <li class="list-group-item">Participant 2</li>
+            <!-- Additional participant names -->
+          </ul>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-8 offset-md-2">
+          <h3>Call Information:</h3>
+          <p id="callStatus">Active call in progress</p>
+          <p id="callDuration">Call duration: 00:15:30</p>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://cdn.socket.io/4.1.3/socket.io.min.js"></script>
+    <script>
+      const socket = io();
+
+      function initiateCall() {
+        const callId = document.getElementById('callId').value;
+        console.log('Call ID:', callId); // Ajouter cette ligne pour le débogage
+        
+        // Émettre l'événement 'initiateCall' vers le serveur
+        socket.emit('initiateCall', { targetUserId: callId });
+      }    
+
+      function joinCall() {
+        const callId = document.getElementById('callId').value;
+    
+        // Émettre l'événement 'joinCall' vers le serveur
+        socket.emit('joinCall', { callId });
+      }
+
+      function endCall() {
+        const callId = document.getElementById('callId').value;
+    
+        // Émettre l'événement 'endCall' vers le serveur
+        socket.emit('endCall', { targetUserId: 'targetUserIdHere' });
+      }
+    </script>
+  ` 
+}) %>

@@ -1,0 +1,51 @@
+<%- include('base', { 
+  pageTitle: 'Connexion', 
+  siteTitle: process.env.SITE_TITLE || 'e-proces',
+  content: `
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title mb-4 text-center">Bienvenue sur e-proces</h2>
+              <p class="card-text text-center">
+                Connectez-vous à votre compte pour accéder à vos procédures judiciaires en ligne.
+              </p>
+              <form action="/login" method="post">
+                <div class="mb-3">
+                  <label for="username" class="form-label">
+                    <i class="bi bi-person-fill"></i> Nom d'utilisateur :
+                  </label>
+                  <input type="text" class="form-control" id="username" name="username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">
+                    <i class="bi bi-lock-fill"></i> Mot de passe :
+                  </label>
+                  <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+                <div class="mb-3 text-center">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-box-arrow-in-right"></i> Se Connecter
+                  </button>
+                </div>
+              </form>
+              <div class="text-center">
+                <p class="mb-0">
+                  <a href="/reset-password">
+                    <i class="bi bi-key-fill"></i> Vous avez oublié votre mot de passe ? Réinitialisez-le ici
+                  </a>
+                </p>
+                <p class="mb-0">
+                  <a href="/signup">
+                    <i class="bi bi-person-plus-fill"></i> Pas encore inscrit ? Inscrivez-vous maintenant
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  ` 
+}) %>

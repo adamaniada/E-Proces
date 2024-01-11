@@ -1,0 +1,49 @@
+<%- include('base', { 
+  pageTitle: 'Bienvenue sur e-proces', 
+  siteTitle: process.env.SITE_TITLE || 'e-proces',
+  content: `
+    <div class="container my-5">
+      <div class="jumbotron bg-primary text-white text-center">
+        <h1 class="display-4">e-proces</h1>
+        <p class="lead">La plateforme en ligne pour gérer vos procédures judiciaires</p>
+        <hr class="my-4">
+        <p>Connectez-vous pour accéder à vos dossiers et participer aux procédures en ligne.</p>
+        <a class="btn btn-light btn-lg" href="/login" role="button">
+          <i class="bi bi-box-arrow-in-right"></i> Se Connecter
+        </a>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <section class="about-section mt-4">
+            <h2 class="mb-4">À propos de e-proces</h2>
+            <p class="fs-5">
+              e-proces est la solution numérique complète pour gérer vos procédures judiciaires en toute simplicité. 
+              Notre plateforme offre une interface conviviale pour collaborer avec des juges en ligne, suivre le déroulement de vos affaires et accéder à des fonctionnalités avancées.
+            </p>
+            <p class="fs-5">
+              Grâce à notre technologie de pointe, vous pouvez télécharger et partager des documents en toute sécurité, planifier des audiences en ligne et recevoir des notifications en temps réel sur l'évolution de vos affaires.
+            </p>
+          </section>
+        </div>
+        <div class="col-md-6">
+          <section class="signup-section mt-4">
+            <h2 class="mb-4">Pas encore inscrit ?</h2>
+            <p class="fs-5">
+              Rejoignez la communauté e-proces dès maintenant pour bénéficier de tous les avantages de la gestion en ligne des procédures judiciaires. 
+              L'inscription est simple et rapide, et vous aurez accès à un ensemble complet d'outils puissants.
+            </p>
+            <ul class="list-group mb-4">
+              <li class="list-group-item fs-5">Créez et gérez vos dossiers judiciaires en ligne.</li>
+              <li class="list-group-item fs-5">Collaborez avec des juges et d'autres parties prenantes en temps réel.</li>
+              <li class="list-group-item fs-5">Participez à des audiences virtuelles et suivez le progrès de vos affaires.</li>
+              <li class="list-group-item fs-5">Recevez des notifications personnalisées sur les mises à jour importantes.</li>
+            </ul>
+            <a class="btn btn-secondary btn-lg" href="/signup" role="button">
+              <i class="bi bi-person-plus-fill"></i> S'inscrire
+            </a>
+          </section>
+        </div>
+      </div>
+    </div>
+  ` 
+}) %>

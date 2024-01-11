@@ -1,0 +1,80 @@
+<%- include('base', {
+    pageTitle: 'À Propos',
+    siteTitle: process.env.SITE_TITLE || 'e-proces',
+    content: `
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-body">
+                <h2 class="card-title mb-4 text-center">À Propos de e-proces</h2>
+                <p class="card-text">
+                  Bienvenue sur e-proces, la plateforme en ligne qui révolutionne la gestion des procédures judiciaires. Notre objectif est de fournir une solution complète et sécurisée pour simplifier votre expérience juridique.
+                </p>
+                <p class="card-text">
+                  Chez e-proces, nous mettons l'accent sur l'efficacité, la transparence et la collaboration. Notre plateforme offre des outils avancés pour les professionnels du droit, les parties prenantes et les utilisateurs finaux, facilitant ainsi la communication et la gestion des dossiers.
+                </p>
+                <h3 class="mt-4">Nos Valeurs</h3>
+                <ul>
+                  <li><strong>Transparence:</strong> Nous croyons en la transparence dans toutes nos interactions et opérations.</li>
+                  <li><strong>Sécurité:</strong> La sécurité de vos données est notre priorité. Nous utilisons des technologies avancées pour assurer la confidentialité de vos informations.</li>
+                  <li><strong>Innovation:</strong> Nous sommes engagés dans l'innovation continue pour rester à la pointe de la technologie juridique.</li>
+                  <li><strong>Service Client:</strong> Notre équipe dévouée est là pour répondre à vos questions et vous offrir un support exceptionnel.</li>
+                </ul>
+                <h3 class="mt-4">Notre Équipe</h3>
+                <p class="card-text">
+                  Rencontrez l'équipe dévouée qui travaille sans relâche pour faire de e-proces une plateforme exceptionnelle.
+                </p>
+                <div class="row mt-3">
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="/images/team-member-1.jpg" class="card-img-top" alt="Team Member 1">
+                      <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Fondateur et PDG</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="/images/team-member-2.jpg" class="card-img-top" alt="Team Member 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Jane Smith</h5>
+                        <p class="card-text">Développeur Principal</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="card">
+                      <img src="/images/team-member-3.jpg" class="card-img-top" alt="Team Member 3">
+                      <div class="card-body">
+                        <h5 class="card-title">Alice Johnson</h5>
+                        <p class="card-text">Designer UX/UI</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h3 class="mt-4">Témoignages</h3>
+                <div class="card mt-3">
+                  <div class="card-body">
+                    <blockquote class="blockquote">
+                      <p class="mb-0">"Grâce à e-proces, notre cabinet juridique a pu améliorer l'efficacité de la gestion des dossiers et offrir un meilleur service à nos clients."</p>
+                      <footer class="blockquote-footer">Client satisfait</footer>
+                    </blockquote>
+                    <blockquote class="blockquote mt-4">
+                      <p class="mb-0">"L'équipe de support de e-proces est exceptionnelle. Toujours prête à aider et résoudre les problèmes rapidement."</p>
+                      <footer class="blockquote-footer">Avocat utilisateur</footer>
+                    </blockquote>
+                  </div>
+                </div>
+                <p class="card-text text-center mt-4">
+                  <a href="/contact" class="btn btn-primary"><i class="bi bi-envelope-fill"></i> Nous Contacter</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    ` 
+  }) %>
+  

@@ -1,0 +1,24 @@
+<%- include('../base', { 
+    pageTitle: 'Erreur 401 - Non autorisé', 
+    siteTitle: process.env.SITE_TITLE || 'e-proces',
+    content: `
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card border-danger">
+                    <div class="card-body text-center">
+                        <img src="/images/error401.png" alt="Erreur 401" class="img-fluid mb-4" style="width: 150px;">
+                        <h2 class="card-title mb-4 text-danger">Erreur 401</h2>
+                        <p class="card-text text-muted">
+                            Désolé, vous n'êtes pas autorisé à accéder à cette page.
+                        </p>
+                        <p class="card-text text-muted">
+                            Pour revenir à la sécurité, vous pouvez retourner à notre <a href="/" class="text-primary">page d'accueil</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    ` 
+}) %>
