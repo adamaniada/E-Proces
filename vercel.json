@@ -1,11 +1,11 @@
 {
-    "name": "e-proces",
+    "name": "E-Proces",
     "builds": [
         {
             "src": "server.js",
             "use": "@vercel/node",
             "config": { 
-                "includeFiles": ["assets/**"] 
+                "includeFiles": ["public/**", "server.js"] 
             }
         }
     ],
@@ -20,6 +20,10 @@
             "dest": "/assets/$1"
         },
         {
+            "src": "/public/(css|scripts)/(.*)",
+            "dest": "/public/$1/$2"
+        },
+        {
             "src": "/(.+)",
             "dest": "/public/$1"
         }
@@ -31,10 +35,9 @@
 
         "DB_CLIENT": "mysql2",
         "DB_HOST": "185.98.131.176",
+        "DB_NAME": "yamba1770964_8fgcij",
         "DB_USERNAME": "yamba1770964_8fgcij",
         "DB_PASSWORD": "Yambadh2019@",
-        "DB_NAME": "yamba1770964_8fgcij",
-
 
         "JWT_SECRET": "secret",
         "JWT_EXPIRES_IN": "2h",

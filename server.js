@@ -9,6 +9,7 @@ const SimplePeer = require('simple-peer');
 
 dotenv.config();
 
+
 const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
@@ -163,6 +164,11 @@ const startServer = (port) => {
     try {
         server.listen(port, () => {
             console.log(`Server running at http://localhost:${port}/`);
+            console.log('DB_CLIENT:', process.env.DB_CONNECTION);
+            console.log('DB_HOST:', process.env.DB_HOST);
+            console.log('DB_NAME:', process.env.DB_NAME);
+            console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
+            console.log('DB_USERNAME:', process.env.DB_USERNAME);
         });
     } catch (error) {
         console.error(error);
