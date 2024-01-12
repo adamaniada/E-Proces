@@ -16,6 +16,8 @@ const io = socketIO(server);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+// Middleware to parse JSON in request body
+app.use(express.json());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -36,6 +38,9 @@ const contactRouter = require("./routes/contact.router");
 const aboutRouter = require("./routes/about.router");
 const faqRouter = require("./routes/faq.router");
 const logoutRouter = require("./routes/logout.router");
+
+const usersRoutes = require('./routes/usersRoutes');
+
 // Utilisez le fichier de routes d'erreurs
 const errorsRoutes = require("./routes/errors.router");
 
@@ -52,6 +57,10 @@ app.use("/contact", contactRouter);
 app.use("/about", aboutRouter);
 app.use("/faq", faqRouter);
 app.use("/logout", logoutRouter);
+
+// Use the user routes with the new base path '/users'
+app.use('/users', usersRoutes);
+
 app.use(errorsRoutes);
 
 // Correct: Declare peers outside any functions
@@ -164,11 +173,6 @@ const startServer = (port) => {
     try {
         server.listen(port, () => {
             console.log(`Server running at http://localhost:${port}/`);
-            console.log('DB_CLIENT:', process.env.DB_CONNECTION);
-            console.log('DB_HOST:', process.env.DB_HOST);
-            console.log('DB_NAME:', process.env.DB_NAME);
-            console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
-            console.log('DB_USERNAME:', process.env.DB_USERNAME);
         });
     } catch (error) {
         console.error(error);

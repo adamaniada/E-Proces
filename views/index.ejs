@@ -1,87 +1,87 @@
 <%- include('base', { 
-    pageTitle: 'Accueil', 
-    siteTitle: process.env.SITE_TITLE || 'e-proces',
-    content: `
-      <div class="container mt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card">
-              <div class="card-body">
-                <h2 class="card-title mb-4 text-center">Bienvenue dans notre Plateforme de Procès en Ligne</h2>
-                <p class="card-text">
-                  Bienvenue sur e-proces, la plateforme en ligne qui simplifie le processus judiciaire. 
-                  Que vous soyez un avocat, un juge ou une partie impliquée, notre système offre une solution efficace et transparente.
-                </p>
-                <p class="card-text">
-                  Pour accéder à votre compte et commencer, veuillez vous connecter ci-dessous.
-                </p>
-                <div class="text-center">
-                  <a href="/login" class="btn btn-primary">Se Connecter</a>
-                </div>
+  pageTitle: 'Accueil', 
+  siteTitle: process.env.SITE_TITLE || 'E-Proces',
+  content: `
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title mb-4 text-center">Bienvenue dans notre Plateforme de Procès en Ligne</h2>
+              <p class="card-text">
+                Bienvenue sur e-proces, la plateforme en ligne qui simplifie le processus judiciaire. 
+                Que vous soyez un avocat, un juge ou une partie impliquée, notre système offre une solution efficace et transparente.
+              </p>
+              <p class="card-text">
+                Pour accéder à votre compte et commencer, veuillez vous connecter ci-dessous.
+              </p>
+              <div class="text-center">
+                <a href="/login" class="btn btn-primary">Se Connecter</a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <h3 class="mb-3">Fonctionnalités Principales</h3>
-            <ul>
-              <li>Gestion des affaires judiciaires en ligne</li>
-              <li>Communication sécurisée entre les parties</li>
-              <li>Suivi des audiences et des décisions</li>
-              <li>Accès aux documents judiciaires</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6">
-            <h3 class="mb-3">Pourquoi choisir e-proces?</h3>
-            <p>
-              Notre plateforme offre une approche moderne et efficace pour gérer les procédures judiciaires en ligne. 
-              Profitez de la facilité d'utilisation, de la sécurité des données et de la transparence tout au long du processus.
-            </p>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-8">
-            <h3 class="mb-3">Ce que nos utilisateurs disent</h3>
-            <div class="card">
-              <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                  <p>"Grâce à e-proces, le suivi de mes affaires judiciaires est devenu tellement plus simple et efficace. Je recommande vivement cette plateforme."</p>
-                  <footer class="blockquote-footer">Client Satisfait</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-6">
-            <h3 class="mb-3">Avantages de notre Plateforme</h3>
-            <ul>
-              <li>Gain de temps dans le traitement des procédures</li>
-              <li>Accès rapide aux informations judiciaires</li>
-              <li>Sécurité renforcée pour la confidentialité des données</li>
-              <li>Collaboration aisée entre les parties impliquées</li>
-            </ul>
-          </div>
-
-          <div class="col-md-6">
-            <h3 class="mb-3">Webinaires et Événements à Venir</h3>
-            <p>Restez à jour avec nos derniers webinaires et événements. Inscrivez-vous dès maintenant :</p>
-            <a href="/events" class="btn btn-info">Voir les Événements</a>
-          </div>
-        </div>
-
-        <div class="row mt-5">
-          <div class="col-md-12 text-center">
-            <h3 class="mb-3">Rejoignez-nous dès aujourd'hui !</h3>
-            <p>Ne manquez pas l'opportunité de simplifier vos procédures judiciaires. Inscrivez-vous dès maintenant :</p>
-            <a href="/signup" class="btn btn-success">S'Inscrire</a>
           </div>
         </div>
       </div>
-    ` 
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h3 class="mb-3">Fonctionnalités Principales</h3>
+          <ul>
+            <li>Gestion des affaires judiciaires en ligne</li>
+            <li>Communication sécurisée entre les parties</li>
+            <li>Suivi des audiences et des décisions</li>
+            <li>Accès aux documents judiciaires</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="mb-3">Pourquoi choisir e-proces?</h3>
+          <p>
+            Notre plateforme offre une approche moderne et efficace pour gérer les procédures judiciaires en ligne. 
+            Profitez de la facilité d'utilisation, de la sécurité des données et de la transparence tout au long du processus.
+          </p>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <h3 class="mb-3">Ce que nos utilisateurs disent</h3>
+          <div class="card">
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>"Grâce à e-proces, le suivi de mes affaires judiciaires est devenu tellement plus simple et efficace. Je recommande vivement cette plateforme."</p>
+                <footer class="blockquote-footer">Client Satisfait</footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <h3 class="mb-3">Avantages de notre Plateforme</h3>
+          <ul>
+            <li>Gain de temps dans le traitement des procédures</li>
+            <li>Accès rapide aux informations judiciaires</li>
+            <li>Sécurité renforcée pour la confidentialité des données</li>
+            <li>Collaboration aisée entre les parties impliquées</li>
+          </ul>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="mb-3">Webinaires et Événements à Venir</h3>
+          <p>Restez à jour avec nos derniers webinaires et événements. Inscrivez-vous dès maintenant :</p>
+          <a href="/events" class="btn btn-info">Voir les Événements</a>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-12 text-center">
+          <h3 class="mb-3">Rejoignez-nous dès aujourd'hui !</h3>
+          <p>Ne manquez pas l'opportunité de simplifier vos procédures judiciaires. Inscrivez-vous dès maintenant :</p>
+          <a href="/signup" class="btn btn-success">S'Inscrire</a>
+        </div>
+      </div>
+    </div>
+  ` 
 }) %>

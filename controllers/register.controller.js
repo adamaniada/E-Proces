@@ -8,7 +8,7 @@ const COOKIE_MAX_AGE = 8 * 60 * 60 * 1000;
 
 const loginController = {
     renderRegisterPage : (req, res) => {
-        res.render('register', {
+        res.render('auth/register', {
             currentPage: 'register',
             siteTitle: process.env.SITE_TITLE || 'E-Proces',
         });
