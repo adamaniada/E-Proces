@@ -4,7 +4,8 @@ const contactController = {
   renderContactPage: (req, res) => {
     res.render('contact', {
       currentPage: 'contact',
-      pageTitle: 'Contactez-nous', siteTitle: process.env.SITE_TITLE || 'e-proces' 
+      pageTitle: 'Contactez-nous', 
+      siteTitle: process.env.SITE_TITLE || 'E-Proces',
     });
   },
   handleContact: (req, res) => {

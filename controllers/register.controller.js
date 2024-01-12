@@ -10,7 +10,7 @@ const loginController = {
     renderRegisterPage : (req, res) => {
         res.render('register', {
             currentPage: 'register',
-            siteTitle: process.env.SITE_TITLE || 'e-proces',
+            siteTitle: process.env.SITE_TITLE || 'E-Proces',
         });
     },
     handleRegister : (req, res) => {

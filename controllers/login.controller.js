@@ -10,7 +10,7 @@ const loginController = {
     renderLoginPage : (req, res) => {
         res.render('login', {
             currentPage: 'login',
-            siteTitle: process.env.SITE_TITLE || 'e-proces',
+            siteTitle: process.env.SITE_TITLE || 'E-Proces',
         });
     },
     handleLogin : (req, res) => {

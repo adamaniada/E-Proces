@@ -7,7 +7,7 @@ const privacyController = {
     getPrivacyPage: (req, res) => {
         res.render('privacy', {
             currentPage: 'privacy',
-            siteTitle: process.env.SITE_TITLE || 'e-proces',
+            siteTitle: process.env.SITE_TITLE || 'E-Proces',
         });
     },
 };

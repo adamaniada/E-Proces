@@ -7,7 +7,7 @@ const callController = {
     getCallPage: (req, res) => {
         res.render('call', {
             currentPage: 'call',
-            siteTitle: process.env.SITE_TITLE || 'e-proces',
+            siteTitle: process.env.SITE_TITLE || 'E-Proces',
         });
     },
 
