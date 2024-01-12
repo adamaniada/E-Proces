@@ -11,18 +11,24 @@
               <p class="card-text text-center">
                 Connectez-vous à votre compte pour accéder à vos procédures judiciaires en ligne.
               </p>
-              <form action="/login" method="post">
+              <form action="/auth/login" method="post">
                 <div class="mb-3">
-                  <label for="username" class="form-label">
+                  <label for="username" class="form-label visually-hidden">
                     <i class="bi bi-person-fill"></i> Nom d'utilisateur :
                   </label>
-                  <input type="text" class="form-control" id="username" name="username" required>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Nom d'utilisateur" required>
+                  </div>
                 </div>
                 <div class="mb-3">
-                  <label for="password" class="form-label">
+                  <label for="password" class="form-label visually-hidden">
                     <i class="bi bi-lock-fill"></i> Mot de passe :
                   </label>
-                  <input type="password" class="form-control" id="password" name="password" required>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Mot de passe" required>
+                  </div>
                 </div>
                 <div class="mb-3 text-center">
                   <button type="submit" class="btn btn-primary">
@@ -32,12 +38,12 @@
               </form>
               <div class="text-center">
                 <p class="mb-0">
-                  <a href="/reset-password">
+                  <a href="/auth/reset-password">
                     <i class="bi bi-key-fill"></i> Vous avez oublié votre mot de passe ? Réinitialisez-le ici
                   </a>
                 </p>
                 <p class="mb-0">
-                  <a href="/signup">
+                  <a href="/auth/register">
                     <i class="bi bi-person-plus-fill"></i> Pas encore inscrit ? Inscrivez-vous maintenant
                   </a>
                 </p>

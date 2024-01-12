@@ -28,35 +28,28 @@ app.use(express.static('public'));
 app.use("/assets", express.static("assets"));
 
 const welcomeRouter = require('./routes/welcome.router');
-const registerRouter = require("./routes/register.router");
-const loginRouter = require("./routes/login.router");
-const refreshRouter = require("./routes/refresh.router");
+const authRoutes = require('./routes/AuthRoutes');
 const homeRouter = require("./routes/home.router");
 const callRouter = require("./routes/call.router");
 const privacyRouter = require("./routes/privacy.router");
 const contactRouter = require("./routes/contact.router");
 const aboutRouter = require("./routes/about.router");
 const faqRouter = require("./routes/faq.router");
-const logoutRouter = require("./routes/logout.router");
-
 const usersRoutes = require('./routes/usersRoutes');
-
 // Utilisez le fichier de routes d'erreurs
 const errorsRoutes = require("./routes/errors.router");
 
 const authMiddleware = require('./middleware/authMiddleware');
 
 app.use('/', welcomeRouter);
-app.use("/login", loginRouter);
-app.use("/register", registerRouter);
-app.use("/api/refresh", refreshRouter);
+// Utilisation des routes d'authentification
+app.use('/auth', authRoutes);
 app.use("/home", homeRouter);
 app.use("/call", callRouter);
 app.use("/privacy", privacyRouter);
 app.use("/contact", contactRouter);
 app.use("/about", aboutRouter);
 app.use("/faq", faqRouter);
-app.use("/logout", logoutRouter);
 
 // Use the user routes with the new base path '/users'
 app.use('/users', usersRoutes);

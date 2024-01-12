@@ -8,7 +8,7 @@
           <div class="card">
             <div class="card-body">
               <h2 class="card-title mb-4 text-center">Rejoignez e-proces</h2>
-              <form action="/register" method="post">
+              <form action="/auth/register" method="post">
                 <div class="mb-3">
                   <label for="username" class="form-label">Nom d'utilisateur :</label>
                   <input type="text" class="form-control" id="username" name="username" required>
@@ -35,10 +35,23 @@
                   <label for="confirmPassword" class="form-label">Confirmez le mot de passe :</label>
                   <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
                 </div>
+
+                <!-- New element for accepting terms and conditions -->
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="acceptTerms" name="acceptTerms" required>
+                  <label class="form-check-label" for="acceptTerms">J'accepte les conditions d'utilisation</label>
+                </div>
+                
                 <div class="mb-3 text-center">
                   <button type="submit" class="btn btn-primary">S'inscrire</button>
                 </div>
               </form>
+
+              <!-- Additional elements for users with existing accounts -->
+              <div class="text-center mt-3">
+                <p>Vous avez déjà un compte ?</p>
+                <a href="/auth/login" class="btn btn-outline-primary">Se connecter</a>
+              </div>
             </div>
           </div>
         </div>

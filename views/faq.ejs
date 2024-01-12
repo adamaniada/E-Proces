@@ -1,69 +1,180 @@
 <%- include('base', {
-    pageTitle: 'FAQ',
-    siteTitle: process.env.SITE_TITLE || 'e-proces',
-    content: `
-      <div class="container mt-5">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <h2 class="mb-4 text-center">Foire aux Questions</h2>
-  
-            <div class="accordion" id="faqAccordion">
-  
-              <!-- Question 1 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="question1">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">
-                    Qu'est-ce que e-proces et comment fonctionne-t-il?
-                  </button>
-                </h3>
-                <div id="answer1" class="accordion-collapse collapse show" aria-labelledby="question1">
-                  <div class="accordion-body">
-                    <p>
-                      e-proces est une plateforme en ligne qui simplifie la gestion des procédures judiciaires. Elle permet aux utilisateurs de créer, gérer et suivre leurs dossiers judiciaires en ligne. Notre plateforme offre des fonctionnalités avancées pour la collaboration avec des juges en ligne, la planification d'audiences virtuelles et la sécurisation des documents.
-                    </p>
-                  </div>
+  pageTitle: 'FAQ',
+  siteTitle: process.env.SITE_TITLE || 'e-proces',
+  content: `
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <h2 class="mb-4 text-center">Foire aux Questions</h2>
+
+          <div class="accordion" id="faqAccordion">
+
+            <!-- Question 1 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#answer1" aria-expanded="true" aria-controls="answer1">
+                  Qu'est-ce que e-proces et comment fonctionne-t-il?
+                </button>
+              </h3>
+              <div id="answer1" class="accordion-collapse collapse show" aria-labelledby="question1">
+                <div class="accordion-body">
+                  <p>
+                    e-proces est une plateforme en ligne qui simplifie la gestion des procédures judiciaires. Elle permet aux utilisateurs de créer, gérer et suivre leurs dossiers judiciaires en ligne. Notre plateforme offre des fonctionnalités avancées pour la collaboration avec des juges en ligne, la planification d'audiences virtuelles et la sécurisation des documents.
+                  </p>
                 </div>
               </div>
-  
-              <!-- Question 2 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="question2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
-                    Comment puis-je m'inscrire sur e-proces?
-                  </button>
-                </h3>
-                <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2">
-                  <div class="accordion-body">
-                    <p>
-                      Pour vous inscrire sur e-proces, cliquez sur le bouton "S'inscrire" sur la page d'accueil. Remplissez le formulaire d'inscription en fournissant les informations requises, puis suivez les étapes pour créer votre compte.
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Question 3 -->
-              <div class="accordion-item">
-                <h3 class="accordion-header" id="question3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
-                    Comment puis-je réinitialiser mon mot de passe?
-                  </button>
-                </h3>
-                <div id="answer3" class="accordion-collapse collapse" aria-labelledby="question3">
-                  <div class="accordion-body">
-                    <p>
-                      Si vous avez oublié votre mot de passe, vous pouvez réinitialiser en cliquant sur "Mot de passe oublié" sur la page de connexion. Suivez les instructions pour réinitialiser votre mot de passe.
-                    </p>
-                  </div>
-                </div>
-              </div>
-  
-              <!-- Ajoutez plus de questions et réponses ici -->
-  
             </div>
-  
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer2" aria-expanded="false" aria-controls="answer2">
+                  Comment puis-je m'inscrire sur e-proces?
+                </button>
+              </h3>
+              <div id="answer2" class="accordion-collapse collapse" aria-labelledby="question2">
+                <div class="accordion-body">
+                  <p>
+                    Pour vous inscrire sur e-proces, cliquez sur le bouton "S'inscrire" sur la page d'accueil. Remplissez le formulaire d'inscription en fournissant les informations requises, puis suivez les étapes pour créer votre compte.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer3" aria-expanded="false" aria-controls="answer3">
+                  Comment puis-je réinitialiser mon mot de passe?
+                </button>
+              </h3>
+              <div id="answer3" class="accordion-collapse collapse" aria-labelledby="question3">
+                <div class="accordion-body">
+                  <p>
+                    Si vous avez oublié votre mot de passe, vous pouvez réinitialiser en cliquant sur "Mot de passe oublié" sur la page de connexion. Suivez les instructions pour réinitialiser votre mot de passe.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer4" aria-expanded="false" aria-controls="answer4">
+                  Comment fonctionne la collaboration avec des juges en ligne?
+                </button>
+              </h3>
+              <div id="answer4" class="accordion-collapse collapse" aria-labelledby="question4">
+                <div class="accordion-body">
+                  <p>
+                    La collaboration avec des juges en ligne sur e-proces permet aux utilisateurs de partager des documents, de planifier des audiences virtuelles et de recevoir des commentaires en temps réel. Il favorise une gestion plus efficace des procédures judiciaires.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer5" aria-expanded="false" aria-controls="answer5">
+                  Comment puis-je suivre mes dossiers judiciaires sur e-proces?
+                </button>
+              </h3>
+              <div id="answer5" class="accordion-collapse collapse" aria-labelledby="question5">
+                <div class="accordion-body">
+                  <p>
+                    Pour suivre vos dossiers judiciaires sur e-proces, connectez-vous à votre compte et accédez à la section "Mes Dossiers". Vous y trouverez toutes les informations nécessaires ainsi que l'état actuel de chaque dossier.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer6" aria-expanded="false" aria-controls="answer6">
+                  Quels sont les avantages de l'utilisation d'e-proces?
+                </button>
+              </h3>
+              <div id="answer6" class="accordion-collapse collapse" aria-labelledby="question6">
+                <div class="accordion-body">
+                  <p>
+                    L'utilisation d'e-proces offre plusieurs avantages, dont la facilité d'accès aux informations judiciaires, la collaboration efficace avec les juges en ligne, la réduction des délais grâce aux audiences virtuelles, et la sécurisation des documents juridiques.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer7" aria-expanded="false" aria-controls="answer7">
+                  Quelles sont les fonctionnalités de sécurité disponibles sur e-proces?
+                </button>
+              </h3>
+              <div id="answer7" class="accordion-collapse collapse" aria-labelledby="question7">
+                <div class="accordion-body">
+                  <p>
+                    e-proces intègre des fonctionnalités de sécurité avancées, telles que le chiffrement des données, l'authentification à deux facteurs, et des contrôles d'accès stricts. Ces mesures garantissent la confidentialité et l'intégrité des informations juridiques.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer8" aria-expanded="false" aria-controls="answer8">
+                  Puis-je utiliser e-proces sur différents appareils?
+                </button>
+              </h3>
+              <div id="answer8" class="accordion-collapse collapse" aria-labelledby="question8">
+                <div class="accordion-body">
+                  <p>
+                    Oui, vous pouvez accéder à e-proces depuis différents appareils tels que les ordinateurs, tablettes et smartphones. Assurez-vous simplement d'avoir une connexion Internet pour accéder à votre compte et suivre vos procédures judiciaires.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer9" aria-expanded="false" aria-controls="answer9">
+                  Comment puis-je contacter le support client d'e-proces?
+                </button>
+              </h3>
+              <div id="answer9" class="accordion-collapse collapse" aria-labelledby="question9">
+                <div class="accordion-body">
+                  <p>
+                    Pour contacter le support client d'e-proces, rendez-vous sur la page de contact de notre site web. Vous y trouverez les informations nécessaires pour nous joindre par e-mail, téléphone ou chat en direct.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="question10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#answer10" aria-expanded="false" aria-controls="answer10">
+                  Est-ce que e-proces propose des formations pour utiliser efficacement la plateforme?
+                </button>
+              </h3>
+              <div id="answer10" class="accordion-collapse collapse" aria-labelledby="question10">
+                <div class="accordion-body">
+                  <p>
+                    Oui, e-proces propose des formations pour vous aider à utiliser efficacement la plateforme. Nous offrons des sessions de formation en ligne ainsi que des ressources documentaires pour vous guider dans l'utilisation de toutes les fonctionnalités disponibles.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more questions and answers here -->
+
           </div>
+
         </div>
       </div>
-    ` 
-  }) %>
-  
+    </div>
+  ` 
+}) %>
