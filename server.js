@@ -28,7 +28,7 @@ app.use(express.static('public'));
 app.use("/assets", express.static("assets"));
 
 const welcomeRouter = require('./routes/welcome.router');
-const authRoutes = require('./routes/AuthRoutes');
+const authRoutes = require('./routes/auth.router');
 const homeRouter = require("./routes/home.router");
 const callRouter = require("./routes/call.router");
 const privacyRouter = require("./routes/privacy.router");

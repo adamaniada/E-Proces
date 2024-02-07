@@ -1,4 +1,5 @@
-// welcomeController.js
+// const UserModel = require('../models/User');
+require('dotenv').config();
 
 const welcomeController = {
     index: (req, res) => {
